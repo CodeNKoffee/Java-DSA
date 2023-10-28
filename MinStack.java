@@ -15,16 +15,16 @@ class MinStack {
 
   public void push(int val) {
     stack.push(val);
-    if (minStack.isEmpty() || val <= minStack.peek()) {
+    if (minStack.isEmpty() || val <= minStack.peek()) 
       minStack.push(val);
-    }
+
   }
 
   public void pop() {
     if (!stack.isEmpty()) {
-      if (stack.peek().equals(minStack.peek())) {
+      if (stack.peek().equals(minStack.peek())) 
         minStack.pop();
-      }
+      
       stack.pop();
     }
   }
