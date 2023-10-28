@@ -1,3 +1,20 @@
+/**
+ * Given a number, this program reverses the number using a stack.
+ *
+ * Examples:
+ *
+ * Input: 365
+ * Output: 563
+ *
+ * Input: 6899
+ * Output: 9986
+ *
+ * The idea is to extract the digits of the number and push them onto a stack.
+ * Once all the digits are pushed onto the stack, we pop the contents of the stack
+ * one by one to form the reversed number. As a stack is a Last-In-First-Out (LIFO)
+ * data structure, the digits of the newly formed number will be in reverse order.
+ */
+
 public class ReverseNumber {
   public static int reverseNumber(int num) {
     if (num == 0) {
@@ -50,4 +67,8 @@ public class ReverseNumber {
     System.out.println("Original number: " + num3 + ", Reversed: " + reversed3);
   }
 }
+
+// Push digits onto the stack and build the reversed number.
+// Stack's LIFO property ensures digits are reversed in order.
+
 
