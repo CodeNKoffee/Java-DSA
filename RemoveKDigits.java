@@ -21,8 +21,8 @@ public class RemoveKDigits {
     ArrayStack stack = new ArrayStack(num.length());
     for (char digit : num.toCharArray()) {
       while (!stack.isEmpty() && k > 0 && digit < stack.top()) {
-      stack.pop();
-      k--;
+        stack.pop();
+        k--;
       }
       stack.push(digit);
     }
@@ -31,6 +31,7 @@ public class RemoveKDigits {
     while (k > 0 && !stack.isEmpty()) {
       stack.pop();
       k--;
+      stack.printStack();
     }
 
     // Build the result string
