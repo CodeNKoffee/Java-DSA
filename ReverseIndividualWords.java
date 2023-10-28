@@ -49,5 +49,7 @@ public class ReverseIndividualWords {
   }
 }
 
-// Push words onto the stack and reverse them individually.
-// Stack's LIFO property maintains word order within the string.
+/**
+ * Push words onto the stack and reverse them individually.
+ * Stack's LIFO property maintains word order within the string.
+ */

@@ -43,5 +43,8 @@ public class ReverseString {
   }
 }
 
-// Push characters onto the stack and reverse the string by popping.
-// Stack's LIFO property reverses the characters efficiently.
+/**
+ * Push characters onto the stack and reverse the string by popping.
+ * Stack's LIFO property reverses the characters efficiently.
+ */
+

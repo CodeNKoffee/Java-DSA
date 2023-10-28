@@ -68,7 +68,9 @@ public class ReverseNumber {
   }
 }
 
-// Push digits onto the stack and build the reversed number.
-// Stack's LIFO property ensures digits are reversed in order.
+/**
+ * Push digits onto the stack and build the reversed number.
+ * Stack's LIFO property ensures digits are reversed in order.
+ */
 
 

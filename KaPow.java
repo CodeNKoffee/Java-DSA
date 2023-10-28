@@ -58,5 +58,12 @@ public class KaPow {
 
     System.out.println("Remaining words in sequence 1: " + result1);
     System.out.println("Remaining words in sequence 2: " + result2);
+  }
 }
-}
+
+/**
+ * Given a sequence of words, eliminate pairs of similar words
+ * that come together. Return the number of remaining words
+ * after pairwise destruction.
+ */
+
