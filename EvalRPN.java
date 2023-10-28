@@ -80,3 +80,9 @@ public class EvalRPN {
     System.out.println(evalRPN(tokens));
   }
 }
+
+/*
+  The invariant is that the stack always contains the correct set of operands and intermediate results necessary to compute the final result of the RPN expression. It maintains the order and structure of the expression as you evaluate it.
+ */
+
+
