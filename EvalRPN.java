@@ -41,30 +41,42 @@ tokens[i] is either an operator: "+", "-", "*", or "/", or an integer in the ran
 public class EvalRPN {
   public static int evalRPN(String[] tokens) {
     ArrayStack stack = new ArrayStack(tokens.length);
-    int res = 0;
-    for (int i = 0; i < tokens.length; i++) {
-      if (tokens[i] == "+") {
-        int operand2 = res || stack.pop();
-        int operand1 = stack.pop();
-        res = operand2 + operand1;
+    int operand2 = 0;
+    int operand1 = 0;
+    for (String token : tokens) {
+      switch (token) {
+        case "/":
+          operand2 = stack.pop();
+          operand1 = stack.pop();
+          stack.push(operand1 / operand2);
+          break;
+        case "*":
+          operand2 = stack.pop();
+          operand1 = stack.pop();
+          stack.push(operand1 * operand2);
+          break;
+        case "+":
+          operand2 = stack.pop();
+          operand1 = stack.pop();
+          stack.push(operand1 + operand2);
+          break;
+        case "-":
+          operand2 = stack.pop();
+          operand1 = stack.pop();
+          stack.push(operand1 - operand2);
+          break;
+        default:
+          stack.push(Integer.parseInt(token));
+          break;
+        }
       }
-      else if (tokens[i] == "-") {
-        int operand2 = res || stack.pop();
-        int operand1 = stack.pop();
-        res = operand2 - operand1;
-      }
-      else if (tokens[i] == "*") {
-        int operand2 = res || stack.pop();
-        int operand1 = stack.pop();
-        res = operand2 * operand1;
-      }
-      else if (tokens[i] == "/") {
-        int operand2 = res || stack.pop();
-        int operand1 = stack.pop();
-        res = operand2 / operand1;
-      }
-      else stack.push(Integer.parseInt(tokens[i])); 
-    }
-    return res;
+    return stack.pop();
+  }
+
+  public static void main(String[] args) {
+    // String[] tokens = {"2","1","+","3","*"};
+    // String[] tokens = {"4","13","5","/","+"};
+    String[] tokens = {"10","6","9","3","+","-11","*","/","*","17","+","5","+"};
+    System.out.println(evalRPN(tokens));
   }
 }
