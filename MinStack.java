@@ -1,8 +1,8 @@
-import java.util.Stack;
-
 /** 
  * Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
  */
+
+import java.util.Stack;
 
 class MinStack {
   private Stack<Integer> stack;
